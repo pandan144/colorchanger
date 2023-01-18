@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changer</title>
+    <style>
+        #container{
+            width: 100%;
+            height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+		<p id="para">pandian</p>
+    </div>
+
+    <script>
+        
+        var bo=document.getElementById("container");
+        document.body.appendChild(bo);
+
+        
+        var but=document.createElement("button");
+        but.setAttribute("type","button");
+        but.setAttribute("onclick","color()");
+        but.innerHTML="click";
+        bo.appendChild(but);
+
+         function color () {
+			var par=document.getElementById("para")
+            var red = Math.floor(Math.random() * 256);
+			console.log(red);
+            var blue = Math.floor(Math.random() * 256);
+			console.log(blue);
+            var green = Math.floor(Math.random() * 256);
+			console.log(green);
+
+           par.style.color = "rgb(" + red + "," + green + "," + blue + ")";
+         };
+
+    </script>
+    
+</body>
+</html>
